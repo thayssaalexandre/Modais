@@ -11,7 +11,21 @@ miniaturas.forEach(function(imagem) {
         imagemModal.alt = imagem.alt;
         nomeImagem.textContent = imagem.alt
     })
-    btnFechar.addEventListener('click', function(){
+})
+
+btnFechar.addEventListener('click', function(){
+    modal.classList.remove("ativo")
+})
+
+modal.addEventListener('click', (evento)=>{
+    if (evento.target === modal){
         modal.classList.remove("ativo")
-    })
-});
+    }
+})
+
+document.addEventListener('keydown', (evento)=>{
+    if (evento.key === "Escape"){
+       modal.classList.remove("ativo") 
+    }
+})
+
