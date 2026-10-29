@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria MPB</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>⨾𓍢 ⋆𝄞 Galeria MPB ✮⋆˙</h1>
+        <p>Clique em uma imagem para ampliar</p>
+    </header>
+
+    <nav class="filtros">
+        <button class="filtro ativo" data-filtro="todas">Todas</button>
+        <button class="filtro" data-filtro="elisRegina">Elis Regina</button>
+        <button class="filtro" data-filtro="galCosta">Gal Costa</button>
+        <button class="filtro" data-filtro="ritaLee">Rita Lee</button>
+    </nav>
+
+    <p id="totalImagens" class="total"></p>
+
+    <main class="galeria">
+        <img src="./assets/Elis1.jpg" alt="Elis Regina" data-categoria="elisRegina" class="miniatura destaque" tabindex="0">
+        <img src="./assets/rita1.jpg" alt="Rita Lee" class="miniatura" data-categoria="ritaLee" tabindex="0">
+        <img src="./assets/gal1.jpg" alt="Gal Costa" class="miniatura"  data-categoria="galCosta" tabindex = "0">
+        <img src="./assets/Elis2.jpg" alt="Elis Regina" class="miniatura"  data-categoria="elisRegina" tabindex = "0">
+        <img src="./assets/rita2.jpg" alt="Rita Lee" class="miniatura horizontal"  data-categoria="ritaLee" tabindex = "0">
+        <img src="./assets/gal2.jpg" alt="Gal Costa" class="miniatura"  data-categoria="galCosta" tabindex = "0">
+        <img src="./assets/elis3.jpg" alt="Elis Regina" class="miniatura horizontal"  data-categoria="elisRegina" tabindex = "0">
+        <img src="./assets/gal3.jpg" alt="Gal Costa" class="miniatura vertical"  data-categoria="galCosta" tabindex = "0">
+        <img src="./assets/rita3.jpg" alt="Rita Lee" class="miniatura horizontal"  data-categoria="ritaLee" tabindex = "0">
+        <img src="./assets/gal4.jpg" alt=" Gal Costa" class="miniatura"  data-categoria="galCosta" tabindex = "0">
+        <img src="./assets/rita4.jpg" alt="Rita Lee" class="miniatura" tabindex="0">
+    </main>
+
+    <div id="modal" class="modal">
+        <button id="fechar" class="fechar">
+            &times
+        </button>
+        
+        <button id="anterior" class="navegacao anterior">
+            &#10094
+        </button>
+
+        <div class="modal-conteudo">
+            <img src="" alt="" id="imagemModal">
+            <div class="legenda">
+                <span id="contador"></span>
+                <span id="nomeImagem"></span>
+            </div>
+        </div>
+
+        <button id="proximo" class="navegacao proximo" aria-label="Proxima Imagem">
+            &#10095
+        </button>
+    </div> 
+    <script src="script.js"></script> 
+</body>
+</html>
